@@ -3,10 +3,14 @@ package dev.hayohtee.meditaka.ui.screen.signup
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.text.KeyboardOptions
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Checkbox
 import androidx.compose.material3.CheckboxDefaults
@@ -47,9 +51,12 @@ fun SignupScreen() {
 @Composable
 fun SignupScreenContent(modifier: Modifier = Modifier) {
     Column(
-        modifier = modifier.padding(dimensionResource(id = R.dimen.medium_padding)),
-        verticalArrangement = Arrangement.SpaceEvenly
+        modifier = modifier
+            .padding(dimensionResource(id = R.dimen.medium_padding))
+            .verticalScroll(rememberScrollState()),
+        verticalArrangement = Arrangement.spacedBy(dimensionResource(id = R.dimen.large_padding))
     ) {
+        Spacer(modifier = Modifier.height(dimensionResource(id = R.dimen.large_padding)))
         RegistrationHeader(
             title = stringResource(id = R.string.register),
             body = stringResource(id = R.string.register_text),
@@ -125,7 +132,7 @@ fun SignupScreenContent(modifier: Modifier = Modifier) {
             Row(
                 verticalAlignment = Alignment.CenterVertically,
 
-            ) {
+                ) {
                 Checkbox(
                     checked = false,
                     onCheckedChange = {},
