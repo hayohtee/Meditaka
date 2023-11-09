@@ -6,6 +6,7 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.RowScope
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.heightIn
+import androidx.compose.foundation.layout.imePadding
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
@@ -58,7 +59,7 @@ fun RegistrationCardContent(
     content: @Composable () -> Unit
 ) {
     Column(
-        modifier = modifier,
+        modifier = modifier.imePadding(),
         verticalArrangement = Arrangement.spacedBy(dimensionResource(id = R.dimen.medium_padding))
     ) {
         ButtonGroup(
