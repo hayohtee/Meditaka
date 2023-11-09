@@ -2,13 +2,12 @@ package dev.hayohtee.meditaka.ui.screen.signin
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.heightIn
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.KeyboardOptions
-import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
@@ -25,7 +24,6 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.tooling.preview.Preview
-import androidx.compose.ui.unit.dp
 import dev.hayohtee.meditaka.R
 import dev.hayohtee.meditaka.ui.component.RegistrationButton
 import dev.hayohtee.meditaka.ui.component.RegistrationCard
@@ -49,8 +47,9 @@ fun SignInScreen() {
 fun SignInScreenContent(modifier: Modifier = Modifier) {
     Column(
         modifier = modifier.padding(dimensionResource(id = R.dimen.medium_padding)),
-        verticalArrangement = Arrangement.SpaceEvenly
+        verticalArrangement = Arrangement.spacedBy(dimensionResource(id = R.dimen.large_padding))
     ) {
+        Spacer(modifier = Modifier.height(dimensionResource(id = R.dimen.large_padding)))
         RegistrationHeader(
             title = stringResource(id = R.string.sign_in),
             body = stringResource(id = R.string.sign_in_text),
