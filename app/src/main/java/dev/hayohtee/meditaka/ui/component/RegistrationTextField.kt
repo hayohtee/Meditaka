@@ -42,13 +42,14 @@ fun RegistrationTextField(
         colors = TextFieldDefaults.colors(
             unfocusedContainerColor = Color.Transparent,
             focusedContainerColor = Color.Transparent,
-            focusedIndicatorColor = MaterialTheme.colorScheme.secondaryContainer,
+            focusedIndicatorColor = MaterialTheme.colorScheme.onPrimary,
             unfocusedIndicatorColor = MaterialTheme.colorScheme.onPrimaryContainer,
             unfocusedPlaceholderColor = MaterialTheme.colorScheme.onPrimaryContainer,
-            focusedPlaceholderColor = MaterialTheme.colorScheme.onSecondaryContainer,
-            focusedTrailingIconColor = MaterialTheme.colorScheme.onSecondaryContainer,
+            focusedPlaceholderColor = MaterialTheme.colorScheme.onPrimary,
+            focusedTrailingIconColor = MaterialTheme.colorScheme.onPrimary,
             unfocusedTrailingIconColor = MaterialTheme.colorScheme.onPrimaryContainer,
-            focusedLeadingIconColor = MaterialTheme.colorScheme.onSecondaryContainer,
+            focusedLeadingIconColor = MaterialTheme.colorScheme.onPrimary,
+            cursorColor = MaterialTheme.colorScheme.onPrimary,
             unfocusedLeadingIconColor = MaterialTheme.colorScheme.onPrimaryContainer
         )
     )
